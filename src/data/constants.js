@@ -36,29 +36,30 @@ import slack from '../images/slack.svg';
 import figma from '../images/figma.svg';
 import sockit from '../images/sockit.webp';
 import bluehost from '../images/bluehost.svg';
-import mti from '../images/mti.png';
-import route from '../images/route.jpg';
-import oreilly from '../images/OReilly.jpg';
-import udemy from '../images/Udemy.png';
-import odc from '../images/odc.jpg';
+import mti from '../images/mti.webp';
+import route from '../images/route.webp';
+import oreilly from '../images/OReilly.webp';
+import udemy from '../images/Udemy.webp';
+import odc from '../images/odc.webp';
 import e01lectronics from '../images/01electronics.ico';
-import booksortz from '../images/booksortz.jpeg';
-import ischool from '../images/ischool.jpg';
-import codepresso from '../images/codepresso.png';
-import nilesons from '../images/nilesons.png';
-import oasis from '../images/oasis.png'
-import movies_app from '../images/Movies_Api.png'
-import Fokir from '../images/fokir.png'
-import SmartLogin from '../images/SmartLogin.png'
-import devfolio from '../images/dev-folio.jpg'
-import egyption_party from '../images/egyption_party.png'
-import Simon from '../images/Simon.png'
-import bookMark from '../images/bookMark.png'
-import Weather from '../images/Weather.png'
-import Angora from '../images/Angora.png'
-import library_management_system from '../images/library management system image.jpg'
-import QR_Attend from '../images/QR-Attend.png'
-import product_management_app from '../images/product-management-app.png'
+import booksortz from '../images/booksortz.webp';
+import ischool from '../images/ischool.webp';
+import codepresso from '../images/codepresso.webp';
+import nilesons from '../images/nilesons.webp';
+import oasis from '../images/oasis.webp'
+import movies_app from '../images/Movies_Api.webp'
+import Fokir from '../images/fokir.webp'
+import SmartLogin from '../images/SmartLogin.webp'
+import devfolio from '../images/dev-folio.webp'
+import egyption_party from '../images/egyption_party.webp'
+import Simon from '../images/Simon.webp'
+import bookMark from '../images/bookMark.webp'
+import Weather from '../images/Weather.webp'
+import Angora from '../images/Angora.webp'
+import library_management_system from '../images/library_management_system.webp'
+import QR_Attend from '../images/QR-Attend.webp'
+import product_management_app from '../images/product-management-app.webp'
+import RaoufPortfolio from '../images/RaoufPortfolio.webp'
 export const Bio = {
   name: "Ahmed Raouf",
   roles: [
@@ -128,7 +129,7 @@ export const skills = [
         name: "Express Js",
         image: express
       },
-   
+
       {
         name: "Nest Js",
         image: nestjs
@@ -460,6 +461,24 @@ export const projects = [
   },
   {
     id: 4,
+    title: "Ahmed Raouf Portfolio",
+    description: "my old portfolio",
+    image: RaoufPortfolio,
+    tags: [
+      "HTML",
+      "CSS",
+      "JS",
+      "Tailwindcss",
+      "Boostrap",
+      "Responsive",
+      "JQuery",
+      "AJAX"
+    ],
+    category: "landing",
+    webapp: "https://ahmed-raouf.netlify.app/",
+  },
+  {
+    id: 5,
     title: "Fokier",
     description: "A responsive portfolio page create by native html and css bootstrab and JS.",
     image: Fokir,
@@ -476,7 +495,7 @@ export const projects = [
     webapp: "https://ahmed-maalawi.github.io/Fokir/",
   },
   {
-    id: 5,
+    id: 6,
     title: "Smart Login",
     description: "A responsive Login and signup page create by native html and css and jQuery with js.",
     image: SmartLogin,
@@ -493,7 +512,7 @@ export const projects = [
     webapp: "https://ahmed-raouf-metwally.github.io/Smart-Login-Signup-Form/",
   },
   {
-    id: 6,
+    id: 7,
     title: "DEV-FOLIO",
     description: "Landing Page",
     image: devfolio,
@@ -510,7 +529,7 @@ export const projects = [
     webapp: "https://ahmed-raouf-metwally.github.io/DevFolio/",
   },
   {
-    id: 7,
+    id: 8,
     title: "Egyptian-party",
     description: "A responsive landing page for event created with bootstrap and jQuery.",
     image: egyption_party,
@@ -527,7 +546,7 @@ export const projects = [
     webapp: "https://ahmed-raouf-metwally.github.io/Egyption_party/",
   },
   {
-    id: 8,
+    id: 9,
     title: "Simon",
     description: "A responsive portfolio page created by bootstrap, fontawesomew and JS.",
     image: Simon,
@@ -545,7 +564,7 @@ export const projects = [
     webapp: "https://ahmed-raouf-metwally.github.io/Simone/",
   },
   {
-    id: 9,
+    id: 10,
     title: "E-Book-Mark",
     description: "A simple application to save websites URLs created by bootstrap and JS",
     image: bookMark,
@@ -562,7 +581,7 @@ export const projects = [
     category: "saas",
   },
   {
-    id: 10,
+    id: 11,
     title: "Weather",
     description: "This project displays a Weather you can search for any country weather of them by using Api , CSS and java-script",
     image: Weather,
@@ -580,7 +599,7 @@ export const projects = [
     webapp: "https://ahmed-raouf-metwally.github.io/weather/",
   },
   {
-    id: 11,
+    id: 12,
     title: "Angora",
     description: "A responsive portfolio page created by bootstrap, fontawesomew and JS (jquery).",
     image: Angora,
@@ -598,7 +617,7 @@ export const projects = [
     webapp: "https://ahmed-raouf-metwally.github.io/portfolio-Angora-/",
   },
   {
-    id: 12,
+    id: 13,
     title: "library management system",
     description: "Library Management System API,  offers a comprehensive solution for libraries to efficiently manage their resources. librarians can effortlessly oversee books, patrons, and borrowing records, streamlining administrative tasks and enhancing the overall library experience.",
     image: library_management_system,
@@ -607,13 +626,13 @@ export const projects = [
       "Maven",
       "H2 database",
       "API",
-  
+
     ],
     category: "library",
     webapp: "https://github.com/Ahmed-Raouf-Metwally/Library-Management-System/",
   },
   {
-    id: 13,
+    id: 14,
     title: "QR-Attend",
     description: "This project displays a E-Learning system and capability to record attendance using Qr-code and has the functionality to delete, update his Session, or change its status by using Node.Js(V 16.14.0) and Mongo DB wit framework: Bootstrap CSS, jquery, Express.js, jsonwebtoken, dotenv, qrcode.DB: Atlas Mongo DB , mongoose.Server: heroku.(This App has version Android)",
     image: QR_Attend,
@@ -627,7 +646,7 @@ export const projects = [
     webapp: "https://github.com/Ahmed-Raouf-Metwally/QR-Attendence-System/",
   },
   {
-    id: 14,
+    id: 15,
     title: "product-management-app",
     description: "I developed a full-stack Product Management App with an Angular frontend and an Express.js backend, integrated with MongoDB for database management. The app includes core functionalities such as adding, deleting, updating, and retrieving products, providing a seamless user experience for product management. On the frontend, Angular handles dynamic, responsive UI components, while the backend, built with Express.js, efficiently manages API requests. For authentication, I implemented JWT-based login and sign-up features, using JSON Web Tokens (JWT) and cookies for secure user sessions. The app includes robust validation mechanisms, ensuring data integrity and secure access to the system's features.",
     image: product_management_app,

@@ -120,7 +120,7 @@ const ProjectCard = ({ project }) => {
           <Avatar src={member.img} />
         ))}
       </Members>
-      <Button href={project.webapp} target="_blank">
+      <Button href={project.webapp} rel="noopener noreferrer"  target="_blank">
         View
       </Button>
       <Tags>
