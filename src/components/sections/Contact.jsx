@@ -138,7 +138,7 @@ export const Contact = () =>
   return (
     <Container id="Education">
       <Wrapper>
-                <StarCanvas />
+        <StarCanvas />
 
         <Title>Contact</Title>
         <Desc

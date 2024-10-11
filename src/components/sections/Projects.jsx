@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { projects } from "../../data/constants";
 import ProjectCard from "../cards/ProjectCard";
-import StarCanvas from "../canvas/Stars";
 
 const Container = styled.div`
   display: flex;
@@ -55,22 +54,23 @@ const ToggleButtonGroup = styled.div`
   color: ${({ theme }) => theme.primary};
   font-size: 16px;
   border-radius: 12px;
-font-weight 500;
-margin: 22px 0;
-z-index=9
-@media (max-width: 768px){
-    font-size: 12px;
+  font-weight 500;
+  margin: 22px 0;
+  @media (max-width: 768px){
+    font-size: 8px;
 }
 `;
 const ToggleButton = styled.div`
   padding: 8px 18px;
   border-radius: 6px;
   cursor: pointer;
+  display:flex
+  align-items: center;
   &:hover {
     background: ${({ theme }) => theme.primary + 20};
   }
   @media (max-width: 768px) {
-    padding: 6px 8px;
+    padding: 2px 2px;
     border-radius: 4px;
   }
   ${({ active, theme }) =>
