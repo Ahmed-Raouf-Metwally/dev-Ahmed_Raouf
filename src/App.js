@@ -10,12 +10,14 @@ import StartCanvas from "./components/canvas/Stars";
 import Projects from "./components/sections/Projects";
 import Contact from "./components/sections/Contact";
 import Footer from "./components/sections/Footer";
+import StarCanvas from "../src/components/canvas/Stars";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
   width: 100%;
   overflow-x: hidden;
   position: relative;
+  
 `;
 
 const Wrapper = styled.div`
@@ -36,11 +38,11 @@ const Wrapper = styled.div`
 
 function App() {
   return (
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={ darkTheme }>
       <BrowserRouter>
         <Navbar />
         <Body>
-          <StartCanvas />
+          {/* <StartCanvas /> */}
           <div>
             <Hero />
             <Wrapper>

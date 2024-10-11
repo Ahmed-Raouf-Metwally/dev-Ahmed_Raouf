@@ -1,6 +1,8 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import styled from "styled-components";
+import StarCanvas from "../canvas/Stars";
+
 
 
 const Container = styled.div`
@@ -58,6 +60,8 @@ const ContactForm = styled.form`
   box-shadow: rgba(23, 92, 230, 0.1) 0px 4px 24px;
   margin-top: 28px;
   gap: 12px;
+  z-index : 99
+
 `;
 const ContactTitle = styled.div`
   font-size: 28px;
@@ -134,6 +138,8 @@ export const Contact = () =>
   return (
     <Container id="Education">
       <Wrapper>
+                <StarCanvas />
+
         <Title>Contact</Title>
         <Desc
           style={{

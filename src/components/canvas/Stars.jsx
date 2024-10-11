@@ -13,9 +13,7 @@ const StyledCanvasWrapper = styled.div`
 
 const Stars = (props) => {
   const ref = useRef();
-  const [sphere] = useState(() =>
-    random.inSphere(new Float32Array(5000), { radius: 1.2 })
-  );
+  const [sphere] = useState(() =>random.inSphere(new Float32Array(5000), { radius: 1.2 })  );
 
   useFrame((state, delta) => {
     ref.current.rotation.x -= delta / 10;
@@ -31,6 +29,7 @@ const Stars = (props) => {
           size={0.002}
           sizeAttenuation={true}
           depthWrite={false}
+          
         />
       </Points>
     </group>
@@ -44,7 +43,7 @@ const StyledStarsCanvas = () => {
         <Suspense fallback={null}>
           <Stars />
         </Suspense>
-        <Preload all />
+        <Preload all/>
       </Canvas>
     </StyledCanvasWrapper>
   );

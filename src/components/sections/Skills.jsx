@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { skills } from "../../data/constants";
 import { Tilt } from "react-tilt";
+import StarCanvas from "../canvas/Stars";
+
 
 const Container = styled.div`
   display: flex;
@@ -53,6 +55,7 @@ const SkillsContainer = styled.div`
   margin-top: 20px;
   gap: 50px;
   justify-content: center;
+  z-index : 99
 `;
 
 const Skill = styled.div`
@@ -119,6 +122,8 @@ const Skills = () => {
   return (
     <Container id="Skills">
       <Wrapper>
+                              <StarCanvas />
+
         <Title>Skills</Title>
         <Desc
           style={{
@@ -129,6 +134,7 @@ const Skills = () => {
         </Desc>
 
         <SkillsContainer>
+
           {skills.map((skill, index) => (
             <Tilt key={index}>
               {/* key={`skill-${index}`} */}

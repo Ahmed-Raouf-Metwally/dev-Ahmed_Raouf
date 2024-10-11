@@ -5,6 +5,8 @@ import styled from "styled-components";
 import { education } from "../../data/constants";
 import EducationCard from "../cards/EducationCard";
 import EarthCanvas from "../canvas/Earth";
+import StarCanvas from "../canvas/Stars";
+
 
 const Container = styled.div`
   display: flex;
@@ -53,6 +55,8 @@ const Education = () => {
   return (
     <Container id="Education">
       <Wrapper>
+        <StarCanvas />
+
         <Title>Education</Title>
         <Desc
           style={{

@@ -219,8 +219,9 @@ const Hero = () => {
   return (
     <div id="About">
       <HeroContainer>
+        <StarCanvas />
         <HeroBg>
-          <StarCanvas />
+          <StarCanvas/>
           <HeroBgAnimation />
         </HeroBg>
 

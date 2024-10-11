@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { projects } from "../../data/constants";
 import ProjectCard from "../cards/ProjectCard";
+import StarCanvas from "../canvas/Stars";
 
 const Container = styled.div`
   display: flex;
@@ -56,6 +57,7 @@ const ToggleButtonGroup = styled.div`
   border-radius: 12px;
 font-weight 500;
 margin: 22px 0;
+z-index=9
 @media (max-width: 768px){
     font-size: 12px;
 }
@@ -95,6 +97,7 @@ const Projects = () => {
   return (
     <Container id="Projects">
       <Wrapper>
+
         <Title>Projects</Title>
         <Desc
           style={{
@@ -170,8 +173,9 @@ const Projects = () => {
             .filter((item) => item.category === toggle)
             .map((project, index) => (
               <ProjectCard key={`project-${index}`} project={project} />
-            ))}
+            ) ) }
         </CardContainer>
+        
       </Wrapper>
     </Container>
   );
