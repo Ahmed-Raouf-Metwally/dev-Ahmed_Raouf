@@ -71,7 +71,7 @@ export const Bio = {
   ],
   description: "Hello I'm Ahmed Raouf a Full Stack Web Developer | Passionate about Building Scalable and High-Performance Applications.",
   github: "https://github.com/Ahmed-Raouf-Metwally",
-  resume: "https://emerald-orelia-40.tiiny.site",
+  resume: "https://ahmed-abdul-raouf-resume.tiiny.site",
   linkedin: "https://www.linkedin.com/in/ahmed-abdul-raouf/",
   facebook: "https://www.facebook.com/AhmedRaouf.Metwally/",
 };
