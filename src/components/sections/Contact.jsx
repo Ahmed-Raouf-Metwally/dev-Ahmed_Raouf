@@ -8,8 +8,8 @@ import StarCanvas from "../canvas/Stars";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-contnet: center;
-  position: rlative;
+  justify-content: center;
+  position: relative;
   z-index: 1;
   align-items: center;
 `;
@@ -138,8 +138,6 @@ export const Contact = () =>
   return (
     <Container id="Education">
       <Wrapper>
-        <StarCanvas />
-
         <Title>Contact</Title>
         <Desc
           style={{
@@ -148,6 +146,7 @@ export const Contact = () =>
         >
           Feel free to reach out to me for any questions or opportunities!
         </Desc>
+        <StarCanvas />
         <ContactForm ref={form} onSubmit={sendEmail}>
           <ContactTitle>Email Me 🚀</ContactTitle>
           <ContactInput placeholder="Your Email" name="from_email" type="email"/>

@@ -10,9 +10,9 @@ import StarCanvas from "../canvas/Stars";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-contnet: center;
+  justify-content: center;
   margin-top: 50px;
-  position: rlative;
+  position: relative;
   z-index: 1;
   align-items: center;
 `;
@@ -55,8 +55,6 @@ const Experience = () => {
   return (
     <Container id="Experience">
       <Wrapper>
-        <StarCanvas />
-        
         <Title>Experience</Title>
         <Desc
           style={{
@@ -68,6 +66,7 @@ const Experience = () => {
         </Desc>
 
         <VerticalTimeline>
+          <StarCanvas />
 
           {experiences.map((experience, index) => (
             <ExperienceCard

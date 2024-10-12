@@ -6,10 +6,10 @@ import ProjectCard from "../cards/ProjectCard";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-contnet: center;
+  justify-content: center;
   margin-top: 50px;
   padding: 0px 16px;
-  position: rlative;
+  position: relative;
   z-index: 1;
   align-items: center;
 `;
@@ -38,6 +38,7 @@ const Title = styled.div`
     font-size: 32px;
   }
 `;
+
 const Desc = styled.div`
   font-size: 18px;
   text-align: center;
@@ -56,10 +57,11 @@ const ToggleButtonGroup = styled.div`
   border-radius: 12px;
   font-weight 500;
   margin: 22px 0;
-  @media (max-width: 768px){
-    font-size: 8px;
+  @media (max-width: 600px){
+    font-size: 9px;
 }
 `;
+
 const ToggleButton = styled.div`
   padding: 8px 18px;
   border-radius: 6px;
@@ -116,7 +118,7 @@ const Projects = () => {
           </ToggleButton>
           <Divider />
           <ToggleButton
-            active={(toggle === "ecommerce").toString()}
+            active={ ( toggle === "ecommerce" ).toString() }
             onClick={() => setToggle("ecommerce")}
           >
             E-Commerce
