@@ -67,7 +67,6 @@ const Experience = () => {
 
         <VerticalTimeline>
           <StarCanvas />
-
           {experiences.map((experience, index) => (
             <ExperienceCard
               key={`experience-${index}`}
