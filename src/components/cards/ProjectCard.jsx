@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const Card = styled.div`
-  width: 330px;
-  height: 570px;
+  width: 347px;
+  height: 590px;
   background-color: ${({ theme }) => theme.card};
   cursor: pointer;
   border-radius: 10px;

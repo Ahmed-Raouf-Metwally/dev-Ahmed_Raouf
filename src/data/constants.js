@@ -60,6 +60,7 @@ import library_management_system from '../images/library_management_system.webp'
 import QR_Attend from '../images/QR-Attend.webp'
 import product_management_app from '../images/product-management-app.webp'
 import RaoufPortfolio from '../images/RaoufPortfolio.webp'
+import JobsAPI from '../images/react-jobs-api-app.PNG'
 export const Bio = {
   name: "Ahmed Raouf",
   roles: [
@@ -579,6 +580,7 @@ export const projects = [
       "fontawesome",
     ],
     category: "saas",
+    webapp: "https://ahmed-raouf-metwally.github.io/Book-Mark/",
   },
   {
     id: 11,
@@ -637,10 +639,17 @@ export const projects = [
     description: "This project displays a E-Learning system and capability to record attendance using Qr-code and has the functionality to delete, update his Session, or change its status by using Node.Js(V 16.14.0) and Mongo DB wit framework: Bootstrap CSS, jquery, Express.js, jsonwebtoken, dotenv, qrcode.DB: Atlas Mongo DB , mongoose.Server: heroku.(This App has version Android)",
     image: QR_Attend,
     tags: [
-      "Spring Boot",
-      "Maven",
-      "H2 database",
-      "API",
+      "Node.js",
+      "MongoDB",
+      "Express.js",
+      "jsonwebtoken",
+      "dotenv",
+      "qrcode",
+      "Atlas Mongo DB",
+      "mongoose",
+      "heroku",
+      "Android",
+      
     ],
     category: "backend",
     webapp: "https://github.com/Ahmed-Raouf-Metwally/QR-Attendence-System/",
@@ -655,6 +664,7 @@ export const projects = [
       "CSS",
       "JS",
       "Boostrap",
+      "Angular",
       "Responsive",
       "API",
       "Node JS",
@@ -667,5 +677,31 @@ export const projects = [
     ],
     category: "backend",
     webapp: "https://github.com/Ahmed-Raouf-Metwally/product-management-app-serverSide.git",
+  },
+   {
+    id: 16,
+     title: "Jobs API App",
+     description: "The Jobs API is a RESTful API built with Node.js, Express, and MongoDB designed to manage job listings. The application provides features for creating, reading, updating, and deleting job postings, allowing users to interact with job data seamlessly. This API allows companies to post job opportunities, and applicants to view and apply for jobs. It also supports user authentication, ensuring secure access to the API's functionalities.",
+     image: JobsAPI,
+    tags: [
+      "React",
+      "Responsive",
+      "API",
+      "Node JS",
+      "Express JS",
+      "Mongo DB",
+      "Atlas Mongo DB",
+      "Mongoose",
+      "JWT",
+      "dotenv",
+      "mongoose",
+      "bcryptjs",
+      "Cookies",
+      "Vercel",
+      "railway",
+      "Swagger UI"
+    ],
+    category: "backend",
+     webapp: "https://react-jobs-api-app.vercel.app/",
   }
 ];
