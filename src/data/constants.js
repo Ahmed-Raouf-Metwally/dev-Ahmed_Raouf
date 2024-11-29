@@ -61,6 +61,7 @@ import QR_Attend from '../images/QR-Attend.webp'
 import product_management_app from '../images/product-management-app.webp'
 import RaoufPortfolio from '../images/RaoufPortfolio.webp'
 import JobsAPI from '../images/react-jobs-api-app.PNG'
+import jobster from '../images/jobster.png'
 export const Bio = {
   name: "Ahmed Raouf",
   roles: [
@@ -680,8 +681,8 @@ export const projects = [
   },
    {
     id: 16,
-     title: "Jobs API App",
-     description: "The Jobs API is a RESTful API built with Node.js, Express, and MongoDB designed to manage job listings. The application provides features for creating, reading, updating, and deleting job postings, allowing users to interact with job data seamlessly. This API allows companies to post job opportunities, and applicants to view and apply for jobs. It also supports user authentication, ensuring secure access to the API's functionalities.",
+     title: "Jobio",
+     description: "The Jobio is a RESTful API built with Node.js, Express, and MongoDB designed to manage job listings. The application provides features for creating, reading, updating, and deleting job postings, allowing users to interact with job data seamlessly. This API allows companies to post job opportunities, and applicants to view and apply for jobs. It also supports user authentication, ensuring secure access to the API's functionalities.",
      image: JobsAPI,
     tags: [
       "React",
@@ -703,5 +704,30 @@ export const projects = [
     ],
     category: "backend",
      webapp: "https://react-jobs-api-app.vercel.app/",
+  },
+  {
+    id: 17,
+    title: "Jobster",
+    description: "A robust backend application designed to manage job listings and user applications efficiently. Developed with Node.js, Express, and MongoDB, Jobster provides user authentication, authorization, and role-based access control. Key features include:",
+    image: jobster,
+    tags: [
+      "React",
+      "Responsive",
+      "API",
+      "Node JS",
+      "Express JS",
+      "Mongo DB",
+      "Atlas Mongo DB",
+      "Mongoose",
+      "aggregation",
+      "JWT",
+      "dotenv",
+      "mongoose",
+      "bcryptjs",
+      "Cookies",
+      "railway",
+    ],
+    category: "backend",
+    webapp: "https://jobster-production-99fc.up.railway.app/landing",
   }
 ];
