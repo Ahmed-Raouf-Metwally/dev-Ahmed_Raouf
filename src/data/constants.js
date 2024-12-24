@@ -62,6 +62,9 @@ import product_management_app from '../images/product-management-app.webp'
 import RaoufPortfolio from '../images/RaoufPortfolio.webp'
 import JobsAPI from '../images/react-jobs-api-app.PNG'
 import jobster from '../images/jobster.png'
+import FiveM from '../images/FiveM.webp'
+import MySQL from '../images/mysql.svg'
+import Prisma from '../images/prisma.svg'
 export const Bio = {
   name: "Ahmed Raouf",
   roles: [
@@ -155,6 +158,14 @@ export const skills = [
       {
         name: "MongoDB",
         image: mongo
+      },
+      {
+        name: "MySQL",
+        image: MySQL
+      },
+      {
+        name: "Prisma",
+        image: Prisma
       },
       {
         name: "Cloudinary",
@@ -338,6 +349,27 @@ export const experiences = [
     skills: [
       "Technical Expertise",
     ]
+
+  },
+  {
+    id: 5,
+    img: FiveM,
+    role: "Jr. Backend Developer",
+    company: "FiveM Tech",
+    date: "Dec 2024- Present",
+    desc: "Developed backend services and REST API using Node.js, Nest.js and Prisma with MySql DB.",
+    skills: [
+      "Node.js",
+      "Nestjs",
+      "MySQL",
+      "Prisma",
+      "REST API",
+      "Swagger",
+      "Technical Expertise",
+      "Problem-Solving Mindset",
+      "Client-Centric Approach",
+      "On-Time Delivery",
+    ],
 
   },
 ];
@@ -650,7 +682,7 @@ export const projects = [
       "mongoose",
       "heroku",
       "Android",
-      
+
     ],
     category: "backend",
     webapp: "https://github.com/Ahmed-Raouf-Metwally/QR-Attendence-System/",
@@ -679,11 +711,11 @@ export const projects = [
     category: "backend",
     webapp: "https://github.com/Ahmed-Raouf-Metwally/product-management-app-serverSide.git",
   },
-   {
+  {
     id: 16,
-     title: "Jobio",
-     description: "The Jobio is a RESTful API built with Node.js, Express, and MongoDB designed to manage job listings. The application provides features for creating, reading, updating, and deleting job postings, allowing users to interact with job data seamlessly. This API allows companies to post job opportunities, and applicants to view and apply for jobs. It also supports user authentication, ensuring secure access to the API's functionalities.",
-     image: JobsAPI,
+    title: "Jobio",
+    description: "The Jobio is a RESTful API built with Node.js, Express, and MongoDB designed to manage job listings. The application provides features for creating, reading, updating, and deleting job postings, allowing users to interact with job data seamlessly. This API allows companies to post job opportunities, and applicants to view and apply for jobs. It also supports user authentication, ensuring secure access to the API's functionalities.",
+    image: JobsAPI,
     tags: [
       "React",
       "Responsive",
@@ -703,7 +735,7 @@ export const projects = [
       "Swagger UI"
     ],
     category: "backend",
-     webapp: "https://react-jobs-api-app.vercel.app/",
+    webapp: "https://react-jobs-api-app.vercel.app/",
   },
   {
     id: 17,
