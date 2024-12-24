@@ -3,6 +3,7 @@ import css from '../images/css.svg'
 import javascript from '../images/js.svg';
 import typescript from '../images/ts.svg';
 import angular from '../images/angular.svg';
+import react from '../images/react.svg';
 import npm from '../images/npm.svg';
 import tailwind from '../images/tailwind.svg';
 import bootstrap from '../images/bootstrap.svg';
@@ -104,6 +105,10 @@ export const skills = [
       {
         name: "Angular",
         image: angular
+      },
+      {
+        name: "React",
+        image: react
       },
       {
         name: "npm",
