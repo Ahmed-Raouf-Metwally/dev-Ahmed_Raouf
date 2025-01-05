@@ -43,6 +43,7 @@ import oreilly from '../images/OReilly.webp';
 import udemy from '../images/Udemy.webp';
 import odc from '../images/odc.webp';
 import e01lectronics from '../images/01electronics.ico';
+import e01lectronics2 from '../images/01electronics_2.jpg';
 import booksortz from '../images/booksortz.webp';
 import ischool from '../images/ischool.webp';
 import codepresso from '../images/codepresso.webp';
@@ -274,7 +275,7 @@ export const experiences = [
 
   {
     id: 0,
-    img: e01lectronics,
+    img: e01lectronics2,
     role: "intern Software Engineer",
     company: "01 Electronics",
     date: "Dec 2021 - Feb 2022",
@@ -291,7 +292,7 @@ export const experiences = [
   },
   {
     id: 1,
-    img: e01lectronics,
+    img: e01lectronics2,
     role: "Junior Software Engineer",
     company: "01 Electronics",
     date: "Mar 2022 - Jun 2023",
