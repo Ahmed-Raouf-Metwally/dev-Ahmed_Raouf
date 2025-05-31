@@ -362,8 +362,8 @@ export const experiences = [
     img: FiveM,
     role: "Jr. Backend Developer",
     company: "FiveM Tech",
-    date: "Dec 2024- Present",
-    desc: "Developed backend services and REST API using Node.js, Nest.js and Prisma with MySql DB.",
+    date: "Dec 2024- Apr 2025",
+    desc: "As a Junior Backend Developer at FiveM Tech, I contributed to the development of backend services and REST APIs using Node.js, Nest.js, and Prisma with MySQL. My role involved designing and implementing scalable backend solutions, ensuring high performance and reliability. I collaborated with cross-functional teams to integrate frontend applications with backend services, enhancing user experiences. Additionally, I utilized Swagger for API documentation, enabling seamless communication between developers and stakeholders. My focus on technical expertise, problem-solving mindset, client-centric approach, and commitment to on-time delivery contributed to the success of our projects.",
     skills: [
       "Node.js",
       "Nestjs",
@@ -375,8 +375,7 @@ export const experiences = [
       "Problem-Solving Mindset",
       "Client-Centric Approach",
       "On-Time Delivery",
-    ],
-
+    ]
   },
 ];
 
