@@ -174,9 +174,9 @@ const Projects = () => {
               <ProjectCard key={index} project={project} />
             ))}
           {toggle !== "all" &&
-            projects.filter((item) => item.category === toggle).length > 0 ? (
+            projects.filter((item) => Array.isArray(item.category) ? item.category.includes(toggle) : item.category === toggle).length > 0 ? (
             projects
-              .filter((item) => item.category === toggle)
+              .filter((item) => Array.isArray(item.category) ? item.category.includes(toggle) : item.category === toggle)
               .map((project, index) => (
                 <ProjectCard key={`project-${index}`} project={project} />
               ))

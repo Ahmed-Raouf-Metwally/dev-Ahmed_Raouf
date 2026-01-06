@@ -67,6 +67,7 @@ import jobster from '../images/jobster.png'
 import FiveM from '../images/FiveM.webp'
 import MySQL from '../images/mysql.svg'
 import Prisma from '../images/prisma.svg'
+import QeemaTech from '../images/QeemaTech.webp'
 export const Bio = {
   name: "Ahmed Raouf",
   roles: [
@@ -766,5 +767,29 @@ export const projects = [
     ],
     category: "backend",
     webapp: "https://jobster-production-99fc.up.railway.app/landing",
+  },
+  {
+    id: 18,
+    title: "QeemaTech Educational Platform",
+    description: "Qeema Tech Educational Platform. This modern, responsive web application provides a seamless learning experience for students and a powerful management interface for administrators.",
+    image: QeemaTech,
+    tags: [
+      "React",
+      "Responsive",
+      "API",
+      "Node JS",
+      "Express JS",
+      "My Sql",
+      "JWT",
+      "dotenv",
+      "bcryptjs",
+      "Cookies",
+      "vrcel",
+      "aiven console",
+      "github",
+
+    ],
+    category: ["backend", "landing", "lms"],
+    webapp: "https://qeema-frontend.vercel.app/",
   }
 ];
