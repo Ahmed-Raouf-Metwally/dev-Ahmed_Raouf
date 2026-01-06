@@ -1,14 +1,16 @@
 import styled, { ThemeProvider } from "styled-components";
-import { darkTheme } from "./utils/Themes";
-import Navbar from "./components/Navbar";
+import { darkTheme, lightTheme } from "./utils/Themes";
+import { Suspense, lazy, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
-import Hero from "./components/sections/Hero";
-import Skills from "./components/sections/Skills";
-import Experience from "./components/sections/Experience";
-import Education from "./components/sections/Education";
-import Projects from "./components/sections/Projects";
-import Contact from "./components/sections/Contact";
-import Footer from "./components/sections/Footer";
+const Navbar = lazy(() => import("./components/Navbar"));
+const Hero = lazy(() => import("./components/sections/Hero"));
+const Skills = lazy(() => import("./components/sections/Skills"));
+const Experience = lazy(() => import("./components/sections/Experience"));
+const Education = lazy(() => import("./components/sections/Education"));
+const Projects = lazy(() => import("./components/sections/Projects"));
+const Contact = lazy(() => import("./components/sections/Contact"));
+const Footer = lazy(() => import("./components/sections/Footer"));
+const ScrollToTop = lazy(() => import("./components/ScrollToTop"));
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -35,27 +37,31 @@ const Wrapper = styled.div`
 `;
 
 function App() {
+  const [darkMode, setDarkMode] = useState(true);
   return (
-    <ThemeProvider theme={ darkTheme }>
+    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <BrowserRouter>
-        <Navbar />
-        <Body>
-          <div>
-            <Hero />
-            <Wrapper>
-              <Skills />
-              <Experience />
-            </Wrapper>
-            <Projects />
-            <Wrapper>
-              <Education />
-              <Contact />
-            </Wrapper>
-            <Footer />
-          </div>
-        </Body>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+          <Body>
+            <div>
+              <Hero />
+              <Wrapper>
+                <Skills />
+                <Experience />
+              </Wrapper>
+              <Projects />
+              <Wrapper>
+                <Education />
+                <Contact />
+              </Wrapper>
+              <Footer />
+              <ScrollToTop />
+            </div>
+          </Body>
+        </Suspense>
       </BrowserRouter>
-    </ThemeProvider>
+    </ThemeProvider >
   );
 }
 

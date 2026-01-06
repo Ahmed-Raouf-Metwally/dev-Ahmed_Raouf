@@ -219,9 +219,9 @@ const Hero = () => {
   return (
     <div id="About">
       <HeroContainer>
-        <StarCanvas />
+
         <HeroBg>
-          <StarCanvas/>
+          <StarCanvas />
           <HeroBgAnimation />
         </HeroBg>
 
@@ -250,9 +250,18 @@ const Hero = () => {
                 <SubTitle>{Bio.description}</SubTitle>
               </motion.div>
 
-              <ResumeButton href={Bio.resume} rel="noopener noreferrer" target="_blank" >
-                Check Resume
-              </ResumeButton>
+              <div style={{ display: 'flex', gap: '15px' }}>
+                <ResumeButton href={Bio.resume} rel="noopener noreferrer" target="_blank" >
+                  Check Resume
+                </ResumeButton>
+                <ResumeButton href="#Contact" style={{
+                  background: "transparent",
+                  border: `1.8px solid ${"#854CE6"}`,
+                  color: "#854CE6"
+                }}>
+                  Contact Me
+                </ResumeButton>
+              </div>
             </HeroLeftContainer>
             <HeroRightContainer>
               <motion.div {...headContentAnimation}>

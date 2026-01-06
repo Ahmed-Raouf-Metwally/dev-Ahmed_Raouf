@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Link as LinkR } from "react-router-dom";
+import { Link as LinkS } from "react-scroll";
 import styled, { useTheme } from "styled-components";
 import { Bio } from "../data/constants";
-import { MenuRounded } from "@mui/icons-material";
+import { MenuRounded, LightMode, DarkMode } from "@mui/icons-material";
 
 const Nav = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -49,7 +50,7 @@ const NavItems = styled.ul`
   }
 `;
 
-const NavLink = styled.a`
+const NavLink = styled(LinkS)`
   color: ${({ theme }) => theme.text_primary};
   font-weight: 500;
   cursor: pointer;
@@ -57,6 +58,9 @@ const NavLink = styled.a`
   text-decoration: none;
   &:hover {
     color: ${({ theme }) => theme.primary};
+  }
+  &.active {
+    border-bottom: 2px solid ${({ theme }) => theme.primary};
   }
 `;
 
@@ -148,25 +152,25 @@ const MobileMenu = styled.ul`
   z-index: ${({ isOpen }) => (isOpen ? "1000" : "-1000")};
 `;
 
-const Navbar = () => {
+const Navbar = ({ darkMode, setDarkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
   const theme = useTheme();
   return (
     <Nav>
       <NavbarContainer>
         <NavLogo to="/">Ahmed Raouf</NavLogo>
-        
 
         <MobileIcon onClick={() => setIsOpen(!isOpen)}>
           <MenuRounded style={{ color: "inherit" }} />
         </MobileIcon>
 
         <NavItems>
-          <NavLink href="#About">About</NavLink>
-          <NavLink href="#Skills">Skills</NavLink>
-          <NavLink href="#Experience">Experience</NavLink>
-          <NavLink href="#Projects">Projects</NavLink>
-          <NavLink href="#Education">Education</NavLink>
+          <NavLink to="About" smooth={true} duration={500} spy={true} exact='true' offset={-80}>About</NavLink>
+          <NavLink to="Skills" smooth={true} duration={500} spy={true} exact='true' offset={-80}>Skills</NavLink>
+          <NavLink to="Experience" smooth={true} duration={500} spy={true} exact='true' offset={-80}>Experience</NavLink>
+          <NavLink to="Projects" smooth={true} duration={500} spy={true} exact='true' offset={-80}>Projects</NavLink>
+          <NavLink to="Education" smooth={true} duration={500} spy={true} exact='true' offset={-80}>Education</NavLink>
+          <NavLink to="Contact" smooth={true} duration={500} spy={true} exact='true' offset={-80}>Contact</NavLink>
         </NavItems>
 
         {isOpen && (
@@ -186,6 +190,11 @@ const Navbar = () => {
             <NavLink onClick={() => setIsOpen(!isOpen)} href="#Education">
               Education
             </NavLink>
+            <div style={{ padding: '0 6px', display: 'flex', width: '100%', justifyContent: 'start' }}>
+              <div onClick={() => setDarkMode(!darkMode)} style={{ cursor: "pointer", display: "flex", alignItems: "center" }}>
+                {darkMode ? <LightMode sx={{ color: theme.text_primary }} /> : <DarkMode sx={{ color: theme.text_primary }} />}
+              </div>
+            </div>
             <GithubButton
               href={Bio.github}
               target="_Blank"
@@ -196,22 +205,38 @@ const Navbar = () => {
             >
               Github
             </GithubButton>
-            <LinkedinButton href={Bio.linkedin} target="_Blank"style={{
+            <LinkedinButton href={Bio.linkedin} target="_Blank" style={{
+              background: theme.primary,
+              color: theme.text_primary,
+            }}>
+              Linkedin
+            </LinkedinButton>
+            <GithubButton
+              href={Bio.resume}
+              target="_Blank"
+              style={{
                 background: theme.primary,
                 color: theme.text_primary,
-              }}>
-            Linkedin
-          </LinkedinButton>
+              }}
+            >
+              Resume
+            </GithubButton>
           </MobileMenu>
         )}
 
         <ButtonContainer>
+          <div onClick={() => setDarkMode(!darkMode)} style={{ cursor: "pointer", marginRight: "20px", display: "flex", alignItems: "center" }}>
+            {darkMode ? <LightMode sx={{ color: theme.text_primary }} /> : <DarkMode sx={{ color: theme.text_primary }} />}
+          </div>
           <GithubButton href={Bio.github} target="_Blank">
             Github
           </GithubButton>
           <LinkedinButton href={Bio.linkedin} target="_Blank">
             Linkedin
           </LinkedinButton>
+          <GithubButton href={Bio.resume} target="_Blank">
+            Resume
+          </GithubButton>
         </ButtonContainer>
       </NavbarContainer>
     </Nav>

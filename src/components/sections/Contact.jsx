@@ -1,7 +1,8 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import styled from "styled-components";
 import StarCanvas from "../canvas/Stars";
+import { Snackbar } from "@mui/material";
 
 
 
@@ -110,33 +111,42 @@ const ContactButton = styled.input`
   font-weight: 600;
 `;
 
-export const Contact = () =>
-{
-
+export const Contact = () => {
+  const [open, setOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
   const form = useRef();
-  const sendEmail = ( e ) =>
-  {
-    e.preventDefault();
-    emailjs
-      .sendForm( 'service_mn9d4px', 'template_ru3un5r', form.current, {
-        publicKey: 'yzSAR_hp4KK9Sdx_S',
-      } )
-      .then(
-        (result) =>
-        {          
-          alert("Message Sent!'");
-          form.current.result();
-        },
-        ( error ) =>
-        {
-          //console.log( 'FAILED...', error.text );
-          alert("FAILED...  "+error.text);
 
+  const sendEmail = (e) => {
+    e.preventDefault();
+    if (!form.current.from_email.value || !form.current.from_name.value || !form.current.from_subject.value || !form.current.message.value) {
+      setError("Please fill in all fields");
+      setOpen(true);
+      return;
+    }
+
+    setLoading(true);
+    emailjs
+      .sendForm('service_mn9d4px', 'template_ru3un5r', form.current, {
+        publicKey: 'yzSAR_hp4KK9Sdx_S',
+      })
+      .then(
+        (result) => {
+          setLoading(false);
+          setError(null);
+          setOpen(true);
+          form.current.reset();
+        },
+        (error) => {
+          setLoading(false);
+          //console.log( 'FAILED...', error.text );
+          setError(error.text);
+          setOpen(true);
         },
       );
   };
   return (
-    <Container id="Education">
+    <Container id="Contact">
       <Wrapper>
         <Title>Contact</Title>
         <Desc
@@ -149,12 +159,18 @@ export const Contact = () =>
         <StarCanvas />
         <ContactForm ref={form} onSubmit={sendEmail}>
           <ContactTitle>Email Me 🚀</ContactTitle>
-          <ContactInput placeholder="Your Email" name="from_email" type="email"/>
+          <ContactInput placeholder="Your Email" name="from_email" type="email" />
           <ContactInput placeholder="Your Name" name="from_name" />
           <ContactInput placeholder="Subject" name="from_subject" />
           <ContactInputMessage placeholder="Message" name="message" rows={4} />
-          <ContactButton type="submit"  value="Send" />
+          <ContactButton type="submit" value={loading ? "Sending..." : "Send"} disabled={loading} />
         </ContactForm>
+        <Snackbar
+          open={open}
+          autoHideDuration={6000}
+          onClose={() => setOpen(false)}
+          message={error ? error : "Message Sent Successfully!"}
+        />
       </Wrapper>
     </Container>
   );

@@ -102,7 +102,7 @@ const Footer = () => {
             <GitHub />
           </SocialMediaIcon>
         </SocialMediaIcons>
-        <Copyright>&copy; 2024 Ahmed Raouf. All rights reserved.</Copyright>
+        <Copyright>&copy; {new Date().getFullYear()} Ahmed Raouf. All rights reserved.</Copyright>
       </FooterWrapper>
     </FooterContainer>
   );

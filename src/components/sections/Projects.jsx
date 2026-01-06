@@ -106,7 +106,7 @@ const Projects = () => {
             marginBottom: "40px",
           }}
         >
-            I have worked on a wide range of projects. From web apps Here are some of my projects.
+          I have worked on a wide range of projects. From web apps Here are some of my projects.
         </Desc>
 
         <ToggleButtonGroup>
@@ -118,7 +118,7 @@ const Projects = () => {
           </ToggleButton>
           <Divider />
           <ToggleButton
-            active={ ( toggle === "ecommerce" ).toString() }
+            active={(toggle === "ecommerce").toString()}
             onClick={() => setToggle("ecommerce")}
           >
             E-Commerce
@@ -130,7 +130,7 @@ const Projects = () => {
           >
             E-Learning
           </ToggleButton>
-         
+
           <Divider />
           <ToggleButton
             active={(toggle === "saas").toString()}
@@ -152,14 +152,14 @@ const Projects = () => {
           >
             Backend
           </ToggleButton>
-           <Divider />
+          <Divider />
           <ToggleButton
             active={(toggle === "library").toString()}
             onClick={() => setToggle("library")}
           >
             library
           </ToggleButton>
-           <Divider />
+          <Divider />
           <ToggleButton
             active={(toggle === "other").toString()}
             onClick={() => setToggle("other")}
@@ -170,14 +170,25 @@ const Projects = () => {
 
         <CardContainer>
           {toggle === "all" &&
-            projects.map((project, index) => <ProjectCard key={index} project={project} />)}
-          {projects
-            .filter((item) => item.category === toggle)
-            .map((project, index) => (
-              <ProjectCard key={`project-${index}`} project={project} />
-            ) ) }
+            projects.map((project, index) => (
+              <ProjectCard key={index} project={project} />
+            ))}
+          {toggle !== "all" &&
+            projects.filter((item) => item.category === toggle).length > 0 ? (
+            projects
+              .filter((item) => item.category === toggle)
+              .map((project, index) => (
+                <ProjectCard key={`project-${index}`} project={project} />
+              ))
+          ) : (
+            toggle !== "all" && (
+              <div style={{ color: "text_secondary", fontSize: "18px", textAlign: "center", width: "100%", padding: "20px" }}>
+                No projects found for this category.
+              </div>
+            )
+          )}
         </CardContainer>
-        
+
       </Wrapper>
     </Container>
   );
