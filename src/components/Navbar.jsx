@@ -175,19 +175,19 @@ const Navbar = ({ darkMode, setDarkMode }) => {
 
         {isOpen && (
           <MobileMenu isOpen={isOpen}>
-            <NavLink onClick={() => setIsOpen(!isOpen)} href="#About">
+            <NavLink onClick={() => setIsOpen(!isOpen)} to="About" smooth={true} duration={500} spy={true} exact='true' offset={-80}>
               About
             </NavLink>
-            <NavLink onClick={() => setIsOpen(!isOpen)} href="#Skills">
+            <NavLink onClick={() => setIsOpen(!isOpen)} to="Skills" smooth={true} duration={500} spy={true} exact='true' offset={-80}>
               Skills
             </NavLink>
-            <NavLink onClick={() => setIsOpen(!isOpen)} href="#Experience">
+            <NavLink onClick={() => setIsOpen(!isOpen)} to="Experience" smooth={true} duration={500} spy={true} exact='true' offset={-80}>
               Experience
             </NavLink>
-            <NavLink onClick={() => setIsOpen(!isOpen)} href="#Projects">
+            <NavLink onClick={() => setIsOpen(!isOpen)} to="Projects" smooth={true} duration={500} spy={true} exact='true' offset={-80}>
               Projects
             </NavLink>
-            <NavLink onClick={() => setIsOpen(!isOpen)} href="#Education">
+            <NavLink onClick={() => setIsOpen(!isOpen)} to="Education" smooth={true} duration={500} spy={true} exact='true' offset={-80}>
               Education
             </NavLink>
             <div style={{ padding: '0 6px', display: 'flex', width: '100%', justifyContent: 'start' }}>
